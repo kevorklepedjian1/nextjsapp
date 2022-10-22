@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React ,{ useState } from "react";
 import axios from "axios";
 import Cookies from "universal-cookie";
 const cookies = new Cookies();
@@ -7,7 +7,7 @@ import styles from "./styles.module.css";
 function login() {
     const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [login, setLogin] = useState(false);
+  const [Login, setLogin] = useState(false);
 
   const handleSubmit = (e) => {
     // prevent the form from refreshing the whole page
@@ -46,7 +46,7 @@ function login() {
 				<div className={styles.left}>
 					<form className={styles.form_container} onSubmit={handleSubmit}>
 						<h1>Login to Your Account</h1> 
-                          {login ? <div><h1 className={styles.success}>mr.{username} congrats you have succcesfully logged in</h1></div>: <div><h1></h1></div>}
+                          {Login ? <div><h1 className={styles.success}>mr.{username} congrats you have succcesfully logged in</h1></div>: <div><h1></h1></div>}
 						<input
             placeholder="username"
 							type="username"
